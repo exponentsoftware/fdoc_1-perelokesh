@@ -10,4 +10,4 @@ const countWords = (sen) => {
     }
     return count;
 }
-console.log(countWords(sentence));
+console.log(countWords.indexOf(sentence));
