@@ -6,17 +6,21 @@ const paragraph = 'I love teaching. If you do not love teaching what else can yo
 function countWords(paragraph, keyword) {
     const times = paragraph.match(new RegExp(`\\b${keyword}\\b`, 'gi'));
 
-    if(times) {
-        console.log(`${keyword} occurs ${times.length} times in thr paragraph`);
+    // if(times) {
+    //     console.log(`${keyword} occurs ${times.length} times in thr paragraph`);
     
  
-    }else {
-        console.log(keyword + " does not occurs")
-    }
-};
+    // }else {
+    //     console.log(keyword + " does not occurs")
+    // }
 
+    // ternany operator
+     times ?  console.log(`${keyword} occurs ${times.length} times in thr paragraph`): console.log(keyword + " does not occurs");
+
+};
+    
 const wordsYouAreLookingFor = ["love","you"];
-wordsYouAreLookingFor.forEach((keyword) => countWords(paragraph, keyword))
+wordsYouAreLookingFor.forEach((keyword) => countWords(paragraph, keyword));
 
 
     
